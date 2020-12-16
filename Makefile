@@ -11,6 +11,7 @@ DOCKER_PREVIEW_FLAGS += --volume "$(shell pwd)/config/grafana/dashboards:/etc/gr
 DOCKER_PREVIEW_FLAGS += -e GF_AUTH_ANONYMOUS_ENABLED=true
 DOCKER_PREVIEW_FLAGS += -e GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
 DOCKER_PREVIEW_FLAGS += -p 3000:3000
+DOCKER_PREVIEW_FLAGS += --rm
 DOCKER_PREVIEW_FLAGS += grafana/grafana:$(GRAFANA_VERSION)
 
 # grafana_preview - launches an instance of grafana that automatially deploys the dashboards in the ./built folder
