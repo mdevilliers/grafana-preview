@@ -1,5 +1,5 @@
 
-GRAFANA_VERSION=7.3.5
+GRAFANA_VERSION=9.0.6
 
 DOCKER_IMAGE_NAME=dashboards-builder
 DOCKER_CONTAINER_NAME=dashboards-builder
