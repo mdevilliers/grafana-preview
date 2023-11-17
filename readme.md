@@ -21,6 +21,28 @@ make grafana_preview # creates an instance of Grafana in docker
 
 Launch 0.0.0.0:3000
 
+### To use with jsonnet
+
+```
+jb init
+jb install https://github.com/grafana/grafonnet-lib/grafonnet
+```
+
+Create a 'dashboards' directory
+Add some dashboards
+
+```
+jsonnet -J ./vendor dashboards/dashboard.jsonnet -o built/dashboard.json
+```
+
+Launch a grafana instance
+
+```
+make grafana_preview
+```
+
+View your dashboards.
+
 
 ### To use https://github.com/weaveworks/grafanalib
 
